@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { formatTime } from '../Time/formatTime.js';
-// LAB 1 (Slide 07): useEffect Timer
+import { formatTime } from '../Time.js';
 export default function Lab1EffectTimer() {
   const [count, setCount] = useState(0);
   console.log('[LAB 1] rendered');

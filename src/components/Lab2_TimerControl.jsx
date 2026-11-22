@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-
-// LAB 2 (Slide 10): Timer Start / Stop / Reset
+import { formatTime } from '../Time.js';
 export default function Lab2TimerControl() {
   const [count, setCount] = useState(0);
   const [running, setRunning] = useState(false);
@@ -23,7 +22,7 @@ export default function Lab2TimerControl() {
   return (
     <div>
       <p className="status">상태: {running ? 'Running' : 'Stopped'}</p>
-      <div className="count">{count}</div>
+      <div className="count">{formatTime(count)}</div>
       <div className="controls">
         <button onClick={() => setRunning(true)} disabled={running}>Start</button>
         <button className="secondary" onClick={() => setRunning(false)} disabled={!running}>Stop</button>

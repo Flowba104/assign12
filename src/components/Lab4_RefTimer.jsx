@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { formatTime } from '../Time.js';
 
-// LAB 4 (Slide 17): Timer ID를 useRef로 관리
 export default function Lab4RefTimer() {
   const [count, setCount] = useState(0);
   const [running, setRunning] = useState(false);
